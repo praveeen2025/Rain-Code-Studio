@@ -1,10 +1,27 @@
 # Rain Code Studio — Privacy-First On-Device AI Developer Copilot
 
-> **Phase 10: Testing, Security, Reliability & Production Readiness Active**  
+> **Phase 12.1: Advanced Project Intelligence Active**  
 > Architected for Snapdragon PCs (Qualcomm Snapdragon X Elite / Hexagon NPU) and modern developer workstations.  
-> Verified: 232 Passing Tests (166 TypeScript Vitest + 66 Python Pytest) • 100% On-Device & Zero Cloud Dependencies.
+> Verified: 267 Passing Tests (197 TypeScript Vitest + 70 Python Pytest) • 100% On-Device & Zero Cloud Dependencies.
 
 Rain Code Studio is a next-generation, privacy-first developer copilot designed to run 100% on-device. By combining local vector search (RAG), syntactic code parsing, and on-device LLM inference via `ModelManager`, your proprietary source code, credentials, and prompts never leave your physical workstation.
+
+---
+
+## Phase 12.1: Advanced Project Intelligence
+
+Phase 12.1 introduces the **Project Intelligence Subsystem**, providing 10 advanced developer-intelligence features grounded in actual workspace data with zero invented metrics:
+
+1. **AI Project Health Dashboard**: Factual code quality, line/symbol density, syntax errors, Git status, dependency counts, RAG vector readiness, and AI runtime health. Unmeasured dynamic test coverage is strictly labeled `"Not measured"`.
+2. **Codebase Architecture Map**: Interactive hierarchical graph (Project → Directories → Files → Modules → Classes → Functions → Imports) with zoom/pan and editor navigation.
+3. **Smart Project Search**: Natural-language intent search combining local RAG vectors + SQLite symbol matches + file paths with explicit selection reasons.
+4. **AI Project Onboarding Mode**: Structured project overview distinguishing verified project facts (`isVerified: true`) from local AI inference (`isVerified: false`).
+5. **Code Impact Analyzer**: Pre-change dependency traversal analyzing directly affected files, incoming callers, affected symbols, and relevant test suites.
+6. **AI Test Coverage Assistant**: Non-destructive test gap analysis suggesting tailored test cases with priority rankings and safe preview generation.
+7. **Documentation Health**: Scans README, docs, and public symbols to classify documentation coverage (`Documented`, `Partially documented`, `Potentially undocumented`).
+8. **AI Refactoring Planner**: Planning-only refactoring engine outlining sequential migration steps, risk assessments, test plans, and documentation requirements.
+9. **Code Similarity Detector**: Structural token and signature similarity detection with side-by-side comparison modal and non-absolute identity disclaimers.
+10. **Local Project Knowledge Base**: Local SQLite repository for architecture decisions (ADRs), development notes, conventions, and limitations with optional RAG indexing.
 
 ---
 
@@ -314,5 +331,7 @@ Rain Code Studio is complete through **Phase 10: Testing, Security, Reliability 
 
 
 #   R a i n - C o d e - S t u d i o  
+ #   R a i n - C o d e - S t u d i o  
+ #   R a i n - C o d e - S t u d i o  
  #   R a i n - C o d e - S t u d i o  
  
