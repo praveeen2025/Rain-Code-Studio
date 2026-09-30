@@ -1,0 +1,44 @@
+{
+  "name": "snapdev-ai",
+  "version": "0.1.0",
+  "description": "Rain Code Studio - Privacy-First On-Device AI Developer Copilot for Snapdragon PCs",
+  "main": "./out/main/index.js",
+  "type": "module",
+  "author": "Rain Code Studio Team",
+  "license": "MIT",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit",
+    "test": "vitest run tests/typescript && python -m pytest tests/python",
+    "test:ts": "vitest run tests/typescript",
+    "test:py": "python -m pytest tests/python",
+    "python:dev": "python python/main.py --host 127.0.0.1 --port 8765"
+  },
+  "dependencies": {
+    "chokidar": "^5.0.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.475.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sql.js": "^1.14.2",
+    "tailwind-merge": "^2.6.0",
+    "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.19",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@types/sql.js": "^1.4.11",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "electron": "^33.4.11",
+    "electron-vite": "^2.3.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.8"
+  }
+}

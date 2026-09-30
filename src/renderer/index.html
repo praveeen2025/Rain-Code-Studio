@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' http://127.0.0.1:* http://localhost:* ws://127.0.0.1:* ws://localhost:*;" />
+    <link rel="icon" type="image/png" href="./assets/logo.png" />
+    <title>Rain Code Studio — On-Device Copilot</title>
+  </head>
+  <body class="bg-ide-bg text-ide-text antialiased selection:bg-snap-crimson selection:text-white overflow-hidden">
+    <div id="root" class="h-screen w-screen flex flex-col"></div>
+    <script type="module" src="./main.tsx"></script>
+  </body>
+</html>

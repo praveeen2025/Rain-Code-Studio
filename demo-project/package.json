@@ -1,0 +1,12 @@
+{
+  "name": "snapdev-demo-project",
+  "version": "1.0.0",
+  "description": "Demo workspace for testing Rain Code Studio developer copilot features",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "test": "echo 'running tests...'"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

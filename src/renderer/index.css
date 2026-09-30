@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root, .dark {
+    /* VS Code Dark+ Palette */
+    --ide-bg: #1e1e1e;
+    --ide-sidebar: #252526;
+    --ide-activitybar: #333333;
+    --ide-activitybar-border: #252526;
+    --ide-surface: #252526;
+    --ide-editor: #1e1e1e;
+    --ide-border: #3c3c3c;
+    --ide-hover: #2a2d2e;
+    --ide-active: #37373d;
+    --ide-text: #cccccc;
+    --ide-text-bright: #ffffff;
+    --ide-muted: #858585;
+    --ide-panel: #1e1e1e;
+    --ide-statusbar: #007acc;
+    --ide-statusbar-text: #ffffff;
+    --ide-input: #3c3c3c;
+    --ide-input-border: #3c3c3c;
+    --ide-tab-active: #1e1e1e;
+    --ide-tab-inactive: #2d2d2d;
+    --ide-tab-active-text: #ffffff;
+    --ide-tab-inactive-text: #969696;
+    --ide-highlight: #094771;
+    --ide-accent: #007acc;
+    --ide-gutter: #1e1e1e;
+    --ide-gutter-text: #858585;
+    color-scheme: dark;
+  }
+
+  .light {
+    /* VS Code Light Modern Palette */
+    --ide-bg: #ffffff;
+    --ide-sidebar: #f8f8f8;
+    --ide-activitybar: #f8f8f8;
+    --ide-activitybar-border: #e7e7e7;
+    --ide-surface: #ffffff;
+    --ide-editor: #ffffff;
+    --ide-border: #e7e7e7;
+    --ide-hover: #e8e8e8;
+    --ide-active: #e4e6f1;
+    --ide-text: #24292f;
+    --ide-text-bright: #090a0c;
+    --ide-muted: #57606a;
+    --ide-panel: #f8f8f8;
+    --ide-statusbar: #007acc;
+    --ide-statusbar-text: #ffffff;
+    --ide-input: #ffffff;
+    --ide-input-border: #d0d7de;
+    --ide-tab-active: #ffffff;
+    --ide-tab-inactive: #ececec;
+    --ide-tab-active-text: #24292f;
+    --ide-tab-inactive-text: #57606a;
+    --ide-highlight: #add6ff;
+    --ide-accent: #007acc;
+    --ide-gutter: #ffffff;
+    --ide-gutter-text: #237893;
+    color-scheme: light;
+  }
+
+  * {
+    border-color: var(--ide-border);
+  }
+
+  body {
+    user-select: none;
+    -webkit-user-select: none;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    background-color: var(--ide-bg);
+    color: var(--ide-text);
+  }
+
+  /* ==============================================================
+     LIGHT MODE CONTRAST & READABILITY
+     Ensures every letter, label, icon, and button is 100% visible
+     ============================================================== */
+
+  /* Default text-white converts to deep dark in light theme */
+  .light .text-white {
+    color: #1e1e1e;
+  }
+
+  .light .text-slate-100 {
+    color: #1e1e1e;
+  }
+
+  .light .text-slate-200 {
+    color: #24292f;
+  }
+
+  .light .text-slate-300 {
+    color: #32383f;
+  }
+
+  .light .text-slate-400 {
+    color: #57606a;
+  }
+
+  /* Specific solid buttons and badges that MUST retain white text */
+  .light .bg-ide-statusbar,
+  .light .bg-ide-statusbar span,
+  .light .bg-ide-statusbar button,
+  .light .bg-ide-statusbar svg,
+  .light .bg-ide-accent,
+  .light .bg-ide-accent *,
+  .light .bg-sky-600,
+  .light .bg-sky-600 *,
+  .light .bg-blue-600,
+  .light .bg-blue-600 *,
+  .light .bg-emerald-600,
+  .light .bg-emerald-600 *,
+  .light .bg-rose-600,
+  .light .bg-rose-600 *,
+  .light .bg-snap-red,
+  .light .bg-snap-red *,
+  .light .bg-snap-crimson,
+  .light .bg-snap-crimson *,
+  .light button.bg-ide-accent,
+  .light button.bg-ide-accent *,
+  .light button.bg-sky-600,
+  .light button.bg-sky-600 *,
+  .light button.bg-blue-600,
+  .light button.bg-blue-600 * {
+    color: #ffffff !important;
+  }
+
+  /* In light mode, ensure input text and placeholder are sharp */
+  .light input,
+  .light textarea,
+  .light select {
+    color: #24292f;
+  }
+
+  .light input::placeholder,
+  .light textarea::placeholder {
+    color: #8c959f;
+  }
+
+  /* Custom scrollbars for VS Code feel */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(121, 121, 121, 0.4);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(100, 100, 100, 0.7);
+  }
+
+  .light ::-webkit-scrollbar-thumb {
+    background: rgba(100, 100, 100, 0.25);
+  }
+
+  .light ::-webkit-scrollbar-thumb:hover {
+    background: rgba(100, 100, 100, 0.45);
+  }
+}
+
+@layer utilities {
+  .drag-region {
+    -webkit-app-region: drag;
+  }
+
+  .no-drag-region {
+    -webkit-app-region: no-drag;
+  }
+
+  /* Micro-animations */
+  .animate-fade-in {
+    animation: fadeIn 0.15s ease-out forwards;
+  }
+
+  .animate-slide-in {
+    animation: slideIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.15s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
